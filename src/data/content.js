@@ -9,14 +9,14 @@ export const profile = {
   name: 'Raihaan',
   greeting: "Hi. I'm Raihaan",
   role: 'FULLSTACK WEB DEVELOPER',
-  identity: 'Raihaan — XI RPL, SMKN 6 Surakarta',
+  identity: 'Muhammad Raihaan Naafi Attaryanto',
   className: 'XI RPL',
   school: 'SMKN 6 Surakarta',
   headline:
     'UI/UX Designer · Fullstack Web Developer · Mobile App Developer · Data Science Enthusiast',
   // Photo file lives in: public/images/profileku.jpeg
   // Set to null to show a "PHOTO PENDING" placeholder box instead.
-  photo: '/images/profileku.jpeg',
+  photo: '/images/profile.jpeg',
   photoAlt: 'Portrait of Raihaan',
   // Terminal-style availability badge in the header.
   status: '$ Raihaan --available',
@@ -34,7 +34,7 @@ export const navLinks = [
 /* ---------- ABOUT ---------- */
 export const about = {
   paragraphs: [
-    "Hi, I'm Raihaan — an XI RPL student at SMKN 6 Surakarta who is genuinely excited about the world of technology. Every day I like to learn how things work behind a screen, from the way an interface is designed to the way data tells a story.",
+    "Hi, I'm Muhammad Raihaan Naafi Attaryanto, you can call me Raihaan — an XI RPL student at SMKN 6 Surakarta who is genuinely excited about the world of technology. Every day I like to learn how things work behind a screen, from the way an interface is designed to the way data tells a story.",
     "Along the way I explore UI/UX design, fullstack web development, mobile app development, and data science. My dream is to become a Data Scientist, so I keep building projects and sharpening my skills one step at a time.",
   ],
   stats: [
@@ -49,17 +49,17 @@ export const skills = [
   {
     id: 'uiux',
     title: 'UI/UX DESIGN',
-    tools: ['Figma', 'FigJam', 'Adobe Photoshop', 'Canva'],
+    tools: ['Figma', 'Affinity', 'Adobe Photoshop', 'Canva'],
   },
   {
     id: 'web',
     title: 'FULLSTACK WEB DEVELOPMENT',
-    tools: ['React', 'Node.js', 'Express', 'PostgreSQL'],
+    tools: ['React', 'Node.js', 'PHP', 'MySQL'],
   },
   {
     id: 'mobile',
     title: 'MOBILE APP DEVELOPMENT',
-    tools: ['Flutter', 'Dart', 'SQLite', 'Firebase'],
+    tools: ['Flutter', 'Kotlin', 'SQLite', 'Firebase'],
   },
   {
     id: 'data',
@@ -125,7 +125,7 @@ export const contact = {
   title: 'CONTACT + SOCIAL MEDIA',
   line: "Open for collaboration and learning. Let's talk.",
   // TODO: replace with your real email address
-  email: 'raihaan@example.com',
+  email: 'raihaan.tech@proton.me',
   socials: [
     {
       label: 'GITHUB',
