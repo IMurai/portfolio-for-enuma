@@ -16,7 +16,7 @@ export const profile = {
     'UI/UX Designer · Fullstack Web Developer · Mobile App Developer · Data Science Enthusiast',
   // Photo file lives in: public/images/profileku.jpeg
   // Set to null to show a "PHOTO PENDING" placeholder box instead.
-  photo: '/images/profile.jpeg',
+  photo: '/images/profileku.jpeg',
   photoAlt: 'Portrait of Raihaan',
   // Terminal-style availability badge in the header.
   status: '$ Raihaan --available',
