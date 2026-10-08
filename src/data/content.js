@@ -77,22 +77,22 @@ export const skills = [
 --------------------------------------------------------------- */
 export const projects = [
   {
-    id: 'educlass',
+    id: 'jadwalin',
     category: 'FULLSTACK WEB DEVELOPMENT',
     frame: 'browser',
-    urlBar: '/projects/educlass.png',
-    // TODO: drop the screenshot into public/projects/educlass.png
-    // then set: screenshot: '/projects/educlass.png'
+    urlBar: '/projects/jadwalin.png',
+    // TODO: drop the screenshot into public/projects/jadwalin.png
+    // then set: screenshot: '/projects/jadwalin.png'
     screenshot: null,
-    screenshotAlt: 'EduClass LMS interface screenshot',
-    title: 'EDUCLASS LMS',
+    screenshotAlt: 'Jadwalin AI Calender interface screenshot',
+    title: 'JADWALIN AI CALENDER',
     status: 'IN PROGRESS',
-    description:
-      'A simple e-learning platform where teachers create classes, upload materials, and assign tasks, while students enroll, submit assignments, and track their grades. Features role-based access (admin, teacher, student) with JWT authentication.',
-    tags: ['REACT', 'NODE.JS', 'EXPRESS', 'POSTGRESQL', 'JWT', 'DOCKER'],
+    description: 
+      'A smart AI-powered calendar platform that helps users manage schedules through natural language chat interaction with an AI assistant named Aijin. Features intelligent event creation, visual calendar with circular heatmap density indicators, and floating modal dialogs. Built with a modern Bauhaus Neo-Brutalist design approach for a unique user experience.',
+    tags: ['REACT', 'VITE', 'JAVASCRIPT', 'HTML', 'CSS', 'GEMINI API'],
     links: [
       // TODO: replace with your real repository URL
-      { label: 'GITHUB', url: null, variant: 'primary' },
+      { label: 'GITHUB', url: 'https://github.com/IMurai/jadwalin.git', variant: 'primary' },
       // TODO: add the deployed URL, then the button becomes clickable
       { label: 'LIVE DEMO', url: null, variant: 'muted' },
     ],
@@ -110,7 +110,7 @@ export const projects = [
     status: 'IN PROGRESS',
     description:
       'A personal finance app for recording income and expenses by category, with monthly summaries and charts. Works fully offline with local storage, so data stays on the device.',
-    tags: ['FLUTTER', 'DART', 'SQLITE', 'FL_CHART'],
+    tags: ['KOTLIN', 'FIGMA', 'FIREBASE', 'FLCHART'],
     links: [
       // TODO: replace with your real repository URL
       { label: 'GITHUB', url: null, variant: 'primary' },
@@ -130,7 +130,7 @@ export const contact = {
     {
       label: 'GITHUB',
       // TODO: replace with your real GitHub profile URL
-      url: 'https://github.com/your-username',
+      url: 'https://github.com/IMurai',
     },
     {
       label: 'LINKEDIN',
@@ -140,7 +140,7 @@ export const contact = {
     {
       label: 'INSTAGRAM',
       // TODO: replace with your real Instagram profile URL
-      url: 'https://www.instagram.com/your.username',
+      url: 'https://www.instagram.com/im.murai',
     },
   ],
 }
