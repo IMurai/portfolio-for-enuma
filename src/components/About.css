@@ -1,0 +1,92 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.about-story {
+  padding: 30px;
+}
+
+.about-label {
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--purple);
+}
+
+.about-paragraph {
+  font-size: 0.94rem;
+}
+
+.about-paragraph + .about-paragraph {
+  margin-top: 16px;
+}
+
+/* ---------- Stat boxes ---------- */
+.about-stats {
+  display: grid;
+  gap: 18px;
+}
+
+.stat-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'marker label'
+    'marker value';
+  align-items: center;
+  column-gap: 14px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.stat-box:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--purple);
+}
+
+.stat-marker {
+  grid-area: marker;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--purple);
+  border: 2px solid var(--ink);
+}
+
+.stat-label {
+  grid-area: label;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.stat-value {
+  grid-area: value;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 899px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

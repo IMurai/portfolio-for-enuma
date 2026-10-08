@@ -1,0 +1,309 @@
+/* ============================================================
+   GLOBAL STYLES — Light Neo-Brutalism
+   ============================================================ */
+
+:root {
+  /* Palette */
+  --bg: #f8f9fb;
+  --purple: #8b3cf0;
+  --purple-light: #e9ddff;
+  --green: #22c55e;
+  --ink: #1a1a1f;
+  --orange: #ff4d00;
+  --white: #ffffff;
+  --grey: #6b7280;
+  --grey-light: #e5e7eb;
+
+  /* Borders + shadows (hard offsets, never blurred) */
+  --border-thick: 3px solid var(--ink);
+  --border: 2px solid var(--ink);
+  --border-grey: 2px solid #9ca3af;
+  --shadow-purple: 6px 6px 0 var(--purple);
+  --shadow-ink: 6px 6px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+
+  /* Type */
+  --font-heading: 'Space Grotesk', 'Arial Black', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Space Mono', ui-monospace, 'Courier New',
+    monospace;
+
+  /* Layout */
+  --header-height: 86px;
+  --container: 1120px;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 12px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.65;
+  background-color: var(--bg);
+  /* Subtle square grid, ~40px cells */
+  background-image: linear-gradient(
+      to right,
+      rgba(26, 26, 31, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(26, 26, 31, 0.055) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Accessibility ---------- */
+:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 999;
+  padding: 12px 18px;
+  background: var(--purple);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: var(--border);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: min(var(--container), 100% - 40px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.section-marker {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  background: var(--orange);
+  border: 2px solid var(--ink);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--purple);
+}
+
+/* ---------- Buttons (brutalist boxes) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--white);
+  border: var(--border);
+  border-radius: 0;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease, color 0.12s ease;
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.btn--primary {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: #7a2be2;
+}
+
+.btn--soft {
+  background: var(--purple-light);
+  color: var(--ink);
+}
+
+.btn--soft:hover {
+  background: #ded0ff;
+}
+
+/* Disabled / "link not added yet" style */
+.btn--disabled,
+.btn:disabled {
+  color: var(--grey);
+  background: var(--grey-light);
+  border-color: var(--grey);
+  box-shadow: 4px 4px 0 var(--grey);
+  cursor: not-allowed;
+}
+
+.btn--disabled:hover,
+.btn:disabled:hover {
+  transform: none;
+  box-shadow: 4px 4px 0 var(--grey);
+}
+
+/* ---------- Tags ---------- */
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--white);
+  border: 2px solid var(--ink);
+}
+
+/* ---------- Status badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: transparent;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.badge--done {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+/* ---------- Card shell ---------- */
+.card {
+  background: var(--white);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-purple);
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
