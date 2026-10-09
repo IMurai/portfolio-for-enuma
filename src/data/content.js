@@ -26,6 +26,7 @@ export const profile = {
 export const navLinks = [
   { id: 'home', label: 'HOME' },
   { id: 'about', label: 'ABOUT' },
+  { id: 'education', label: 'EDUCATION' },
   { id: 'skills', label: 'SKILLS' },
   { id: 'projects', label: 'PROJECTS' },
   { id: 'contact', label: 'CONTACT' },
@@ -41,6 +42,37 @@ export const about = {
     { marker: '01', label: 'CLASS', value: 'XI RPL' },
     { marker: '02', label: 'SCHOOL', value: 'SMKN 6 SURAKARTA' },
     { marker: '03', label: 'GOAL', value: 'DATA SCIENTIST' },
+  ],
+}
+
+/* ---------- EDUCATION JOURNEY ----------
+   Chronological learning journey, oldest first.
+   Adding an entry = add one more object to `entries`.
+---------------------------------------------------------------- */
+export const education = {
+  subtitle: 'FROM EARLY EXPERIMENTS TO SOFTWARE ENGINEERING',
+  entries: [
+    {
+      id: 'mtsn-1-karanganyar',
+      school: 'MTsN 1 Karanganyar',
+      description:
+        'My introduction to technology began with learning the fundamentals of robotics, including Arduino and basic hardware programming. In 2022, I also participated in the Krenova competition in the Karanganyar region, gaining an early opportunity to explore technological innovation.',
+      topics: ['ROBOTICS', 'ARDUINO', 'HARDWARE PROGRAMMING', 'KRENOVA 2022'],
+    },
+    {
+      id: 'smk-negeri-6-surakarta',
+      school: 'SMK Negeri 6 Surakarta',
+      description:
+        'Developing a stronger foundation in software engineering through programming practices aligned with industry standards. My learning spans multiple areas of software development, including web development, game development, mobile application development, backend development, and UI/UX design.',
+      topics: [
+        'SOFTWARE ENGINEERING',
+        'WEB DEVELOPMENT',
+        'GAME DEVELOPMENT',
+        'MOBILE APP DEVELOPMENT',
+        'BACKEND DEVELOPMENT',
+        'UI/UX DESIGN',
+      ],
+    },
   ],
 }
 

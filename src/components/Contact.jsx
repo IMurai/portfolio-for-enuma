@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="container">
         <div className="section-head reveal">
           <span className="section-marker" aria-hidden="true" />
-          <span className="section-number">05</span>
+          <span className="section-number">06</span>
           <h2 id="contact-title" className="section-title">
             Contact <span>/ Social Media</span>
           </h2>

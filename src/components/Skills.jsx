@@ -11,7 +11,7 @@ export default function Skills() {
       <div className="container">
         <div className="section-head reveal">
           <span className="section-marker" aria-hidden="true" />
-          <span className="section-number">03</span>
+          <span className="section-number">04</span>
           <h2 id="skills-title" className="section-title">
             Skills <span>/ Keahlian</span>
           </h2>

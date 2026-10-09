@@ -210,3 +210,25 @@
     display: block;
   }
 }
+
+/* Keep the extra EDUCATION item tidy on narrower desktops. */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .nav-list {
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .status-badge {
+    padding: 7px 10px;
+    font-size: 0.66rem;
+  }
+}

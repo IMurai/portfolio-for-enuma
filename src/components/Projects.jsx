@@ -12,7 +12,7 @@ export default function Projects() {
       <div className="container">
         <div className="section-head reveal">
           <span className="section-marker" aria-hidden="true" />
-          <span className="section-number">04</span>
+          <span className="section-number">05</span>
           <h2 id="projects-title" className="section-title">
             Projects <span>/ Proyek</span>
           </h2>

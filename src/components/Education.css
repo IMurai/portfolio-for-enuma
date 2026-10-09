@@ -1,0 +1,140 @@
+/* ---------- Education Journey timeline ---------- */
+.education-subtitle {
+  margin: -18px 0 30px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.education-timeline {
+  display: grid;
+  gap: 30px;
+  list-style: none;
+}
+
+.education-item {
+  position: relative;
+  padding-left: 48px;
+}
+
+/* Vertical timeline line, drawn per entry so it bridges the gaps. */
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: 14.5px;
+  top: 36px;
+  bottom: -30px;
+  width: 3px;
+  background: var(--ink);
+}
+
+.education-item:last-child::before {
+  display: none;
+}
+
+.education-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--purple);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.education-card {
+  padding: 24px 26px;
+  background: var(--white);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-ink);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.education-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--purple);
+}
+
+.education-school {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.14rem;
+  text-transform: uppercase;
+}
+
+/* Limited green accent as a highlight cue. */
+.education-school::before {
+  content: '';
+  flex: none;
+  width: 10px;
+  height: 10px;
+  background: var(--green);
+  border: 2px solid var(--ink);
+}
+
+.education-desc {
+  margin-top: 12px;
+  max-width: 72ch;
+  font-size: 0.92rem;
+  overflow-wrap: break-word;
+}
+
+.education-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.education-tag {
+  display: inline-block;
+  padding: 6px 11px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+
+.education-tag:hover {
+  background: var(--green);
+  color: var(--ink);
+  transform: translate(-2px, -2px);
+}
+
+@media (max-width: 560px) {
+  .education-item {
+    padding-left: 38px;
+  }
+
+  .education-item::before {
+    left: 11.5px;
+  }
+
+  .education-marker {
+    width: 26px;
+    height: 26px;
+    font-size: 0.64rem;
+  }
+
+  .education-card {
+    padding: 18px;
+  }
+}
